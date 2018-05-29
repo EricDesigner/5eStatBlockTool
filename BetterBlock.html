@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Better Stat Block</title>
+  </head>
+
+
+
+  <body>
+
+    <form method="post" action="http://www.bit.vt.edu" autocomplete="on">
+      <label>Creature Name:
+        <input name="CreatName" type="text" size="25" placeholder="Animated Armor" required/>
+      </label><br />
+
+
+      <Label> Size:
+        <select>
+        <option name="Size" value="Tiny"> Tiny</option>
+        <option name="Size" value="Small"> Small</option>
+        <option name="Size" value="Medium"> Medium</option>
+        <option name="Size" value="Large"> Large</option>
+        <option name="Size" value="Huge"> Huge</option>
+        <option name="Size" value="Gargantuan"> Gargantuan</option>
+        </select>
+      </Label>
+
+
+      <Label> Type:
+        <select>
+        <option name="Type" value="Aberration"> Aberration</option>
+        <option name="Type" value="Beast"> Beast</option>
+        <option name="Type" value="Celestial"> Celestial</option>
+        <option name="Type" value="Construct"> Construct</option>
+        <option name="Type" value="Dragon"> Dragon</option>
+        <option name="Type" value="Elemental"> Elemental</option>
+        <option name="Type" value="Fey"> Fey</option>
+        <option name="Type" value="Fiend"> Fiend</option>
+        <option name="Type" value="Giant"> Giant</option>
+        <option name="Type" value="Humanoid"> Humanoid</option>
+        <option name="Type" value="Monstrosity"> Monstrosity</option>
+        <option name="Type" value="Ooze"> Ooze</option>
+        <option name="Type" value="Plant"> Plant</option>
+        <option name="Type" value="Undead"> Undead</option>
+        </select>
+      </Label>
+
+
+      <Label>Alignment:
+      <select>
+        <option name="Alignment" value="Chaotic Good"> Chaotic Good</option>
+        <option name="Alignment" value="Chaotic Neutral"> Chaotic Neutral</option>
+        <option name="Alignment" value="Chaotic Evil"> Chaotic Evil</option>
+        <option name="Alignment" value="Neutral Good"> Neutral Good</option>
+        <option name="Alignment" value="True Neutral"> True Neutral</option>
+        <option name="Alignment" value="Neutral Evil"> Neutral Evil</option>
+        <option name="Alignment" value="Lawful Good"> Lawful Good</option>
+        <option name="Alignment" value="Lawful Neutral"> Lawful Neutral</option>
+        <option name="Alignment" value="Lawful Evil"> Lawful Evil</option>
+      </select>
+      </Label>
+</br>
+<Label> Armor Class: <span id="demo"></span>
+      <input name="AC" type="range" min="1" max="35" value="1" id="ACSlide">
+
+
+    <script>
+    var slider = document.getElementById("ACSlide");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
+
+</Label>
+</br>
+
+      <label> Damage Resistances:
+         <input name="Resistances" type="checkbox" value="Slashing"> Slashing
+         <input name="Resistances" type="checkbox" value="Bludgeoning"> Bludgeoning
+         <input name="Resistances" type="checkbox" value="Piercing"> Piercing
+         <input name="Resistances" type="checkbox" value="Fire"> Fire
+         <input name="Resistances" type="checkbox" value="Cold"> Cold
+         <input name="Resistances" type="checkbox" value="Lightning"> Lightning
+         <input name="Resistances" type="checkbox" value="Thunder"> Thunder
+         <input name="Resistances" type="checkbox" value="Acid"> Acid
+         <input name="Resistances" type="checkbox" value="Poison"> Poison
+         <input name="Resistances" type="checkbox" value="Force"> Force
+         <input name="Resistances" type="checkbox" value="Psychic"> Psychic
+         <input name="Resistances" type="checkbox" value="Radiant"> Radiant
+         <input name="Resistances" type="checkbox" value="Necrotic"> Necrotic
+      </label>
+
+      <label> Damage Immunities:
+         <input name="Immunities" type="checkbox" value="Slashing"> Slashing
+         <input name="Immunities" type="checkbox" value="Bludgeoning"> Bludgeoning
+         <input name="Immunities" type="checkbox" value="Piercing"> Piercing
+         <input name="Immunities" type="checkbox" value="Fire"> Fire
+         <input name="Immunities" type="checkbox" value="Cold"> Cold
+         <input name="Immunities" type="checkbox" value="Lightning"> Lightning
+         <input name="Immunities" type="checkbox" value="Thunder"> Thunder
+         <input name="Immunities" type="checkbox" value="Acid"> Acid
+         <input name="Immunities" type="checkbox" value="Poison"> Poison
+         <input name="Immunities" type="checkbox" value="Force"> Force
+         <input name="Immunities" type="checkbox" value="Psychic"> Psychic
+         <input name="Immunities" type="checkbox" value="Radiant"> Radiant
+         <input name="Immunities" type="checkbox" value="Necrotic"> Necrotic
+      </label>
+
+      <label> Condition Immunities:
+          <input name="CondImmune" type="checkbox" value="Blinded"> Blinded
+          <input name="CondImmune" type="checkbox" value="Charmed"> Charmed
+          <input name="CondImmune" type="checkbox" value="Deafened"> Deafened
+          <input name="CondImmune" type="checkbox" value="Exhaustion"> Exhaustion
+          <input name="CondImmune" type="checkbox" value="Frightened"> Frightened
+          <input name="CondImmune" type="checkbox" value="Grappeled"> Grappeled
+          <input name="CondImmune" type="checkbox" value="Invisible"> Invisible
+          <input name="CondImmune" type="checkbox" value="Paralyzed"> Paralyzed
+          <input name="CondImmune" type="checkbox" value="Petrified"> Petrified
+          <input name="CondImmune" type="checkbox" value="Poisoned"> Poisoned
+          <input name="CondImmune" type="checkbox" value="Prone"> Prone
+          <input name="CondImmune" type="checkbox" value="Restrained"> Restrained
+          <input name="CondImmune" type="checkbox" value="Stunned"> Stunned
+          <input name="CondImmune" type="checkbox" value="Unconcious"> Unconcious
+      </label>
+
+      <label>Vision:
+          <input name="Vision" type="checkbox" value="Normal"> Normal
+          <input name="Vision" type="checkbox" value="Blindsight"> Blindsight
+          <input name="Vision" type="checkbox" value="Darkvision"> Darkvision
+          <input name="Vision" type="checkbox" value="Truesight"> Truesight
+      </label>
+
+      <label>Vision Range:
+          <input name="VisRange" type="text" size="5" placeholder="30 ft"/>
+
+      <label>Challenge Rating:
+        <input name="ChallRating" type="text" size="5" placeholder="4" min = "0" max="30" required/>
+      </label><br />
+
+
+
+
+
+  </body></Label>
+</html>
